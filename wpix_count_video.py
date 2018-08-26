@@ -22,4 +22,7 @@ def wpix_count(v_file):
 
     yield ret, num_wpix
 
-
+def fps(v_file):
+  cap = cv2.VideoCapture(v_file)
+  fps = cap.get(cv2.CAP_PROP_FPS)
+  return fps
